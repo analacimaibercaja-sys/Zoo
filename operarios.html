@@ -16,26 +16,37 @@
             justify-content: space-between;
             align-items: stretch;
             align-content: stretch;
-            gap: 8px;
+            gap: 30px;
             padding: 16px;
         }
 
         .flex-item {
-            padding: 12px;
+                    width: 140px;
+        height: 200px;
+        /*border-radius: 50%;*/
+        object-fit: cover;
+        margin-bottom: 10px;
+            
+            padding: 20px;
             background-color: #f3f4f6;
             border: 1px solid #d1d5db;
-            border-radius: 6px;
-            text-align: center;
+            border-radius: 6px;*/
+            /*text-align: center;*/
+        }
+        .card{
+            border: 1px solid black;
+            padding: 40px;
         }
 
     </style>
 </head>
 <body>
+    <h1>Nuestros operarios</h1>
     <div id="workers" class="flex-container">
         <!-- lista de operarios-->
     </div>
-    <div>
-        <!-- formulario para agregar operarios-->
+    <div class="container card">
+        <h2>Alta de nuevos operarios</h2> 
         <form >
             <div class="form-row mb-3">
             <label for="fullname" class="form-label">Nombre:</label>
@@ -51,14 +62,14 @@
             </div>
             <div class="form-row mb-3">
             <label for="fullAddress" class="form-label">Dirección completa:</label>
-            <textarea="text" id="txtFullAddress" name="fullAddress" class="form-control"></textarea>
+            <textarea id="txtFullAddress" name="fullAddress" class="form-control"></textarea>
             </div>
             <div class="form-row mb-3">            
             <label for="phoneNumber" class="form-label">Teléfono:</label>
             <input type="tel" id="txtPhoneNumber" name="phoneNumber" class="form-control" />
             </div>
             <div class="form-row mb-3">      
-            <label for="email" class="form-label">Teléfono:</label>
+            <label for="email" class="form-label">Correo electrónico:</label>
             <input type="email" id="txtEmail" name="email" class="form-control" />
             </div>
             
