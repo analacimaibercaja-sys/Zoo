@@ -1,0 +1,4 @@
+falta añadir los contenedores de cabecera y footer en todas las páginas
+el índice
+modificar operarios
+el ecosistema

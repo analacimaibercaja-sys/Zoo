@@ -1,0 +1,212 @@
+/* colores 
+verde #6b7f6d
+pie fcf9f5
+marrón clarito #fff6eb
+marrón oscuro #54433a*/
+:root{
+    --color-bg: #6b7f6d;
+}
+
+body {
+  padding-top: 106px;
+  margin: 0;
+}
+.title-header{
+  margin: 0px;
+  padding: 20px;
+
+  text-align: center;
+  color: #fcf9f5;
+
+  background-color: var(--color-bg);
+}
+
+footer {
+  color: #fff6eb;
+  background-color: var(--color-bg);
+}
+footer h6 {
+  text-decoration: underline;
+}
+@media (max-width: 452px) {
+  footer h6 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+  }
+}
+
+.icons {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.icons i {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 452px) {
+  .icons {
+    gap: 8px;
+  }
+  .icons i {
+    font-size: 1.3rem;
+  }
+}
+
+/* Contenedor general index.html*/
+.bg {
+  height: 100vh;
+  background-color: #74bd3b;
+}
+
+/* Imagen de fondo base */
+.bg1 {
+  background-image: url("../img/Animales/ciervo2560x1740.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .bg1 {
+    background-image: url("../img/Animales/ciervo768x724.jpg");
+    background-attachment: scroll;
+    background-size: contain;
+    background-position: center top;
+    background-color: #74bd3b;
+  }
+}
+
+.photos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  gap: 30px;
+  padding: 16px;
+  margin: 40px;
+}
+.photos__img {
+  width: 140px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  padding: 20px;
+
+  /*background-color: #fff6eb;*/
+
+  background-color: #f3f4f6;
+}
+
+.photos__img:hover{
+      transform: scale(1.1);
+      /*padding:0px;*/
+}
+.card {
+  border: 1px solid black;
+  padding: 40px;
+  margin: 40px;
+}
+.round-border {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.animal-info {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+}
+
+.carousel-item img {
+    border-radius: 10px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.animal-info h3 {
+    color: var(--color-bg);
+
+    border-bottom: 3px solid #6b7f6d;
+    padding-bottom: 10px;
+}
+
+.animal-info h5 {
+    color: var(--color-bg);
+    font-size: 1.1rem;
+}
+
+/* Hero Simple - Index */
+.index-bg {
+    background-image: url('../img/Animales/ciervo2560x1740.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative; /* ← Necesario para el contenido absoluto */
+}
+/* oscurece el fondo
+.index-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+    */
+
+.index-txt {
+    position: absolute;
+    top: 70%;  
+    left: 2%;  
+    z-index: 2;
+    color: white;
+    max-width: 500px;
+    transform: translateY(-50%);
+}
+
+.index-txt h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.index-txt p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+
+@media (max-width: 768px) {
+    .index-bg {
+        background-image: url('../img/Animales/ciervo768x724.jpg');
+    }
+    
+    .index-txt {
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        text-align: center;
+        max-width: 95%;
+        padding: 0 1rem;
+    }
+    
+    .index-txt h1 {
+        font-size: 2.5rem;
+    }
+
+}
