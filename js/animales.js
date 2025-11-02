@@ -1,6 +1,4 @@
-// js/animales.js
 document.addEventListener('DOMContentLoaded', function() {
-    // Kangaroo animation
     const kangaroo = document.getElementById("kangaroo");
     const mainContent = document.querySelector(".main-content");
 
@@ -14,12 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
         kangaroo.classList.remove("animate");
         kangaroo.style.display = "none";
         
-        // Show main content after animation
         if (mainContent) {
             mainContent.classList.add("show");
         }
         
-        // Initialize animals content
         initializeAnimals();
     }
 
@@ -32,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         initializeAnimals();
     }
-
 
     const animalsInfo = [
         {
@@ -61,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 {
                     subtitle: "Su rugido se oye muy, muy lejos 🌍",
-                    text: "¡Hasta a 8 kilómetros de distancia! Es su manera de decir <a href='/Zoo/ecosistemas.html' >'este es mi territorio'</a>."
+                    text: "¡Hasta a 8 kilómetros de distancia! Es su manera de decir <a href='ecosistemas.html' >'este es mi territorio'</a>."
                 },
                 {
                     subtitle: "Duermen un montón 😴",
@@ -116,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 {
                     subtitle: "Ven poco, pero huelen genial 👃",
-                    text: "Aunque su vista es mala, su olfato y oído son tan buenos que no se les escapa nada."
+                    text: "Aunque su vista es mala, su olfato y oído son tan buenos que no se les escapa <em>nada<em>."
                 }
             ]
         }
