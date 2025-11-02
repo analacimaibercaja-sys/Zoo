@@ -1,39 +1,6 @@
 // js/animales.js
 document.addEventListener('DOMContentLoaded', function() {
-    // Kangaroo animation
-    const kangaroo = document.getElementById("kangaroo");
-    const mainContent = document.querySelector(".main-content");
-
-    function startKangarooAnimation() {
-        if (kangaroo) {
-            kangaroo.classList.add("animate");
-        }
-    }
-
-    function onKangarooAnimationEnd() {
-        kangaroo.classList.remove("animate");
-        kangaroo.style.display = "none";
-        
-        // Show main content after animation
-        if (mainContent) {
-            mainContent.classList.add("show");
-        }
-        
-        // Initialize animals content
-        initializeAnimals();
-    }
-
-    if (kangaroo) {
-        kangaroo.addEventListener("animationend", onKangarooAnimationEnd, false);
-        startKangarooAnimation();
-    } else {
-         if (mainContent) {
-            mainContent.classList.add("show");
-        }
-        initializeAnimals();
-    }
-
-
+    // Información de cada animal
     const animalsInfo = [
         {
             title: "Pato silvestre",
@@ -61,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 {
                     subtitle: "Su rugido se oye muy, muy lejos 🌍",
-                    text: "¡Hasta a 8 kilómetros de distancia! Es su manera de decir <a href='/Zoo/ecosistemas.html' >'este es mi territorio'</a>."
+                    text: "¡Hasta a 8 kilómetros de distancia! Es su manera de decir 'este es mi territorio'."
                 },
                 {
                     subtitle: "Duermen un montón 😴",
@@ -122,33 +89,46 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
 
+    
+    // Función para mostrar información del animal
     function showAnimalInfo(index) {
         const animal = animalsInfo[index];
-        const container = document.getElementById('info-animal');
+        const contenedor = document.getElementById('info-animal');
         
         let html = `<h3 class="text-center mb-4">${animal.title}</h3>`;
         
-        animal.data.forEach(item => {
+        animal.data.forEach(data => {
             html += `
                 <div class="mb-3">
-                    <h5 class="text">${item.subtitle}</h5>
-                    <p class="mb-0">${item.text}</p>
+                    <h5 text">${data.subtitle}</h5>
+                    <p class="mb-0">${data.text}</p>
                 </div>
             `;
         });
         
-        container.innerHTML = html;
+        contenedor.innerHTML = html;
     }
 
-    function initializeAnimals() {
-        showAnimalInfo(0);
+    ball = document.getElementById("ball");
 
-        const carousel = document.getElementById('carouselAnimals');
-        if (carousel) {
-            carousel.addEventListener('slid.bs.carousel', function(event) {
-                const index = event.to;
-                showAnimalInfo(index);
-            });
+        function onAnimationEnd() {
+          ball.classList.remove("animate");
+          ball.style.display = "none"; 
+
         }
+                ball.addEventListener("animationend", onAnimationEnd, false);
+        if (ball) {
+          ball.classList.add("animate");
+        }
+    // Inicializar con el primer animal
+    showAnimalInfo(0);
+
+    // Escuchar cambios en el carousel
+    const carousel = document.getElementById('carouselAnimals');
+    if (carousel) {
+        carousel.addEventListener('slid.bs.carousel', function(event) {
+            const index = event.to;
+            showAnimalInfo(index);
+        });
     }
 });
