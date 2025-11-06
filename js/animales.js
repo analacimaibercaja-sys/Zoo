@@ -123,14 +123,16 @@ document.addEventListener('DOMContentLoaded', function() {
         
         let html = `<h3 class="text-center mb-4">${animal.title}</h3>`;
         
-        animal.data.forEach(item => {
+        //animal.data.forEach(item => {
+        for(const item of animal.data){
             html += `
                 <div class="mb-3">
                     <h5 class="text">${item.subtitle}</h5>
                     <p class="mb-0">${item.text}</p>
                 </div>
             `;
-        });
+        }
+        //});
         
         container.innerHTML = html;
     }
